@@ -34,7 +34,7 @@ pipeline {
  
         stage('build image') {
             steps {
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'jenkins', path: '', url: 'http://3.109.154.27:8080/')], contextPath: 'netflix', war: 'target/*'
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'jenkins', path: '', url: 'http://3.109.154.27:8080')], contextPath: 'netflix', war: '**/*.war'
             }
         }
         
