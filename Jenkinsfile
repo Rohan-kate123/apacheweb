@@ -45,7 +45,7 @@ pipeline {
                             url: 'http://13.126.165.22:8080'
                         )
                     ],
-                    contextPath: 'sfdvsjhdfasdcaswefsdfmsdfwefwer',
+                    contextPath: 'sfdvsjhdfasdssdfgdfdacaswefsdfmsdfwefwer',
                     war: 'target/*.war'
                 )
             }
