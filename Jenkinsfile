@@ -42,7 +42,7 @@ pipeline {
                             alternativeDeploymentContext: '',
                             credentialsId: 'jenkins',
                             path: '',
-                            url: 'http://65.1.100.168:8080'
+                            url: 'http://13.126.165.22:8080'
                         )
                     ],
                     contextPath: 'rohankfffffddddddddddddddddddddddffffayte',
