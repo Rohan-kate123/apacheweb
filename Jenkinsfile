@@ -7,10 +7,10 @@ pipeline {
 
     stages {
 
-        stage('code') {
+        stage('Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/tom-cat-1-dot/apachewe.git'
+                    url: 'https://github.com/Rohan-kate123/apachewe.git'
             }
         }
 
@@ -31,13 +31,28 @@ pipeline {
                 sh 'mvn package'
             }
         }
- 
-        stage('build image') {
+
+        stage('Docker Build') {
             steps {
-                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'jenkins', path: '', url: 'http://3.109.154.27:8080')], contextPath: 'netflix', war: '**/*.war'
+                sh 'docker build -t netflix5 .'
             }
         }
-        
 
+        stage('Deploy to Tomcat') {
+            steps {
+                deploy(
+                    adapters: [
+                        tomcat9(
+                            alternativeDeploymentContext: '',
+                            credentialsId: 'jenkins',
+                            path: ''
+                            url: 'http://65.1.100.168:8080'
+                        )
+                    ],
+                    contextPath: 'sample',
+                    war: 'target/*.war'
+                )
+            }
+        }
     }
 }
