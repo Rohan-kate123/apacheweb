@@ -32,11 +32,7 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                sh 'docker build -t netflix5 .'
-            }
-        }
+
 
         stage('Deploy to Tomcat') {
             steps {
