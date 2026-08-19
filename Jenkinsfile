@@ -10,7 +10,7 @@ pipeline {
         stage('Code') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Rohan-kate123/apachewe.git'
+                    url: 'https://github.com/Rohan-kate123/apacheweb.git'
             }
         }
 
