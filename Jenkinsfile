@@ -45,7 +45,7 @@ pipeline {
                             url: 'http://65.1.100.168:8080'
                         )
                     ],
-                    contextPath: 'rohankfffffffffayte',
+                    contextPath: 'rohankfffffddddddddddddddddddddddffffayte',
                     war: 'target/*.war'
                 )
             }
